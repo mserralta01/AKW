@@ -1,0 +1,42 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    @apply text-gray-900 antialiased;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply bg-[#ff1e1e] text-white px-6 py-2 rounded-md hover:bg-[#e01818] transition-colors;
+  }
+  
+  .btn-secondary {
+    @apply bg-[#1e3d59] text-white px-6 py-2 rounded-md hover:bg-[#162f45] transition-colors;
+  }
+}
+
+@layer utilities {
+  .text-shadow {
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+  }
+
+  .wiggle {
+    animation: wiggle 1s infinite;
+  }
+
+  @keyframes wiggle {
+    0%, 100% {
+      transform: rotate(-3deg);
+    }
+    50% {
+      transform: rotate(3deg);
+    }
+  }
+}
